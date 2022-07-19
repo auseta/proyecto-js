@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  font-family: "Sharpshooter", sans-serif;
 }
 
 .container {
@@ -62,6 +63,7 @@ body {
   font-weight: 300;
   text-decoration: none;
   font-size: 1.2vw;
+  font-family: "Sharpshooter", sans-serif;
 }
 .container .header .header-navbar .header-navbar-side-a ul li:hover {
   background-color: var(--main-hover-color);
@@ -84,6 +86,7 @@ body {
   font-weight: 300;
   text-decoration: none;
   font-size: 1.2vw;
+  font-family: "Sharpshooter", sans-serif;
 }
 .container .header .header-navbar .header-navbar-side-b ul li a i {
   margin-right: 8px;
@@ -137,6 +140,7 @@ body {
   font-weight: 300;
   text-decoration: none;
   font-size: 1.2vw;
+  font-family: "Sharpshooter", sans-serif;
 }
 .container .header .header-info .header-info-links button a i {
   padding-right: 5px;
@@ -149,6 +153,7 @@ body {
   font-weight: 300;
   text-decoration: none;
   font-size: 1.2vw;
+  font-family: "Sharpshooter", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -177,13 +182,11 @@ body {
     font-size: 1.5rem;
     padding-right: 10px;
   }
-  .container .header .header-hamburger-navbar .navbar-hamburger-menu .display {
+  .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-  }
-  .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items {
     list-style: none;
     background-color: var(--transparent-color);
     padding: 0;
@@ -192,11 +195,16 @@ body {
     width: 120px;
     top: 75px;
     right: -40px;
+    transition: all 0.2s ease;
   }
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a {
     color: var(--main-color);
     text-decoration: none;
     font-size: 2vw;
+    padding: 1rem;
+  }
+  .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a:hover {
+    background-color: var(--main-hover-color);
   }
   .container .header .header-info p {
     padding-bottom: 20px;
