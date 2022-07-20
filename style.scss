@@ -181,11 +181,12 @@ body {
       }
       .header-info-links {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         width: 100%;
         justify-content: space-evenly;
         margin-top: 55px;
         button {
+          display: flex;
           padding: 1vw;
           background-color: var(--bg-color);
           border: 0.5px solid var(--main-color);
