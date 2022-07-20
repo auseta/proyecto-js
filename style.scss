@@ -302,6 +302,7 @@ body {
             font-size: 1.5rem;
             padding-right: 10px;
           }
+
           .hamburger-menu-items {
             @include flexColumnItemCenter();
             justify-content: space-evenly;
@@ -313,6 +314,9 @@ body {
             width: 120px;
             right: -40px;
             animation: translate 0.1s forwards;
+            &.remove {
+              display: none;
+            }
             a {
               color: var(--main-color);
               text-decoration: none;

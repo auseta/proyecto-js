@@ -296,6 +296,9 @@ body {
     right: -40px;
     animation: translate 0.1s forwards;
   }
+  .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items.remove {
+    display: none;
+  }
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a {
     color: var(--main-color);
     text-decoration: none;
