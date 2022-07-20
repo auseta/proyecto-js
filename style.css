@@ -20,6 +20,7 @@
   --main-hover-color: #b9ae951a;
   --bg-color: #000400;
   --transparent-color: rgb(0, 4, 0, .5);
+  --paragraph-color: #878995;
 }
 
 *,
@@ -197,7 +198,7 @@ body {
 }
 .container .blog-section .text {
   font-size: 1.2vw;
-  color: gray;
+  color: var(--paragraph-color);
   padding: 0 20px;
 }
 .container .blog-section:hover {
@@ -232,14 +233,34 @@ body {
   flex-wrap: wrap;
 }
 .container .news-section .news-cards .card-item {
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30vw;
 }
 .container .news-section .news-cards .card-item iframe {
   max-height: 40vh;
   max-width: 30vw;
 }
+.container .news-section .news-cards .card-item h4 {
+  margin-top: 0px;
+  color: var(--main-color);
+  font-size: 1.5vw;
+}
+.container .news-section .news-cards .card-item p {
+  margin-top: -10px;
+  font-size: 1vw;
+  color: var(--paragraph-color);
+  text-align: center;
+}
 
 @media (max-width: 768px) {
+  .container .header-bg-image {
+    min-height: 78vh;
+  }
+  .container .header {
+    min-height: 80vh;
+  }
   .container .header .header-navbar {
     display: none;
   }
@@ -289,11 +310,21 @@ body {
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a:hover {
     background-color: var(--main-hover-color);
   }
+  .container .header .header-info {
+    min-height: 60vh;
+  }
+  .container .header .header-info .header-info-img {
+    max-width: 28vw;
+  }
   .container .header .header-info p {
     padding-bottom: 20px;
   }
   .container .header .header-info .header-info-links {
     margin-top: 20px;
+  }
+  .container .blog-section {
+    margin-top: 2vw;
+    margin-bottom: 25px;
   }
 }
 
