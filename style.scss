@@ -1,22 +1,30 @@
 @font-face {
-  font-family: 'Sharpshooter';
+  font-family: "Sharpshooter";
   font-style: normal;
   font-weight: 400;
-  src: local('Sharpshooter'), url('https://fonts.cdnfonts.com/s/46920/Sharpshooter.woff') format('woff');
+  src: local("Sharpshooter"),
+    url("https://fonts.cdnfonts.com/s/46920/Sharpshooter.woff") format("woff");
 }
 
 // Animations
 @keyframes translate {
-  0% { transform: translateY(0px) }
-  50% { transform: translateY(25px); }
-  100% { transform: translateY(40px) }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
 }
 
 //Mixins
 @mixin backgroundImage {
   position: absolute;
-  max-width: 98vw;
-  min-height: 100vh;
+  max-width: 100vw;
+  min-height: 65vh;
+  z-index: 0;
   filter: brightness(0.11);
 }
 
@@ -71,7 +79,7 @@
   --main-color: #8f8774;
   --main-hover-color: #b9ae951a;
   --bg-color: #000400;
-  --transparent-color: rgb(0, 4, 0, .5);
+  --transparent-color: rgb(0, 4, 0, 0.5);
   --paragraph-color: #878995;
 }
 
@@ -79,7 +87,7 @@
 *::after,
 *::before {
   box-sizing: border-box;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -103,7 +111,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 47vh;
     max-width: 85%;
     .header-navbar {
       @include headerNavbar();
@@ -113,7 +121,7 @@ body {
         img {
           max-height: 15vh;
           max-width: 12vw;
-          margin-top: 1.5rem
+          margin-top: 1.5rem;
         }
         ul {
           @include unorderList();
@@ -152,7 +160,7 @@ body {
     }
     .header-info {
       @include flexColumnItemCenter();
-      min-height: 70vh;
+      min-height: 35vh;
       max-width: 70%;
       z-index: 1;
       color: var(--main-color);
@@ -193,7 +201,7 @@ body {
           }
         }
         a {
-          @include anchorTag()
+          @include anchorTag();
         }
       }
     }
@@ -216,7 +224,7 @@ body {
     }
 
     &:hover {
-      border: .5px dotted var(--main-color);
+      border: 0.5px dotted var(--main-color);
     }
   }
 
@@ -274,11 +282,7 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    .header-bg-image {
-      min-height: 78vh;
-    }
     .header {
-      min-height: 80vh;
       .header-navbar {
         display: none;
       }
@@ -290,14 +294,14 @@ body {
           max-height: 30vh;
           max-width: 15vw;
           padding-bottom: 15px;
-        }        
+        }
         .navbar-hamburger-menu {
           i {
             position: relative;
             color: var(--main-color);
             font-size: 1.5rem;
             padding-right: 10px;
-          }         
+          }
           .hamburger-menu-items {
             @include flexColumnItemCenter();
             justify-content: space-evenly;
@@ -308,12 +312,12 @@ body {
             height: 300px;
             width: 120px;
             right: -40px;
-            animation: translate .1s forwards;
+            animation: translate 0.1s forwards;
             a {
               color: var(--main-color);
               text-decoration: none;
               font-size: 2vw;
-              padding: .5rem;
+              padding: 0.5rem;
               &:hover {
                 background-color: var(--main-hover-color);
               }
@@ -325,7 +329,6 @@ body {
         .header-info-img {
           max-width: 28vw;
         }
-        min-height: 60vh;
         p {
           padding-bottom: 20px;
         }
@@ -338,8 +341,90 @@ body {
     .blog-section {
       margin-top: 2vw;
       margin-bottom: 25px;
+      h3 {
+        font-size: 2.5vw;
+      }
+      .text {
+        font-size: 2vw;
+      }
     }
   }
 }
 
-
+@media (max-width: 576px) {
+  .container {
+    .header-bg-image {
+      min-height: 45vh;
+    }
+    .header {
+      .header-hamburger-navbar {
+        margin-bottom: 35px;
+        top: 10px;
+        img {
+          max-width: 17vw;
+          padding-bottom: 8px;
+        }
+        .navbar-hamburger-menu {
+          i {
+            font-size: 6vw;
+          }
+          .hamburger-menu-items {
+            height: 100px;
+            width: 85px;
+            right: -10px;
+          }
+        }
+      }
+      .header-info {
+        .header-info-img {
+          max-width: 35vw;
+          margin-bottom: 15px;
+        }
+        h2 {
+          font-size: 5vw;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 2vw;
+        }
+        .header-info-links {
+          button {
+            a {
+              font-size: 1.8vw;
+            }
+          }
+          a {
+            font-size: 1.8vw;
+          }
+        }
+      }
+    }
+    .blog-section {
+      margin-top: 4vw;
+      margin-bottom: 5px;
+    }
+    .news-section {
+      .news-title {
+        h3 {
+          font-size: 2.5vw;
+        }
+      }
+      .news-cards {
+        flex-direction: column;
+        .card-item {
+          max-width: 70vw;
+          iframe {
+            max-width: 70vw;
+          }
+          h4 {
+            font-size: 2.5vw;
+          }
+          p {
+            font-size: 2vw;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

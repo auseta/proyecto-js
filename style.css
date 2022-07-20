@@ -19,7 +19,7 @@
   --main-color: #8f8774;
   --main-hover-color: #b9ae951a;
   --bg-color: #000400;
-  --transparent-color: rgb(0, 4, 0, .5);
+  --transparent-color: rgb(0, 4, 0, 0.5);
   --paragraph-color: #878995;
 }
 
@@ -44,15 +44,16 @@ body {
 }
 .container .header-bg-image {
   position: absolute;
-  max-width: 98vw;
-  min-height: 100vh;
+  max-width: 100vw;
+  min-height: 65vh;
+  z-index: 0;
   filter: brightness(0.11);
 }
 .container .header {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 47vh;
   max-width: 85%;
 }
 .container .header .header-navbar {
@@ -129,7 +130,7 @@ body {
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  min-height: 70vh;
+  min-height: 35vh;
   max-width: 70%;
   z-index: 1;
   color: var(--main-color);
@@ -255,12 +256,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container .header-bg-image {
-    min-height: 78vh;
-  }
-  .container .header {
-    min-height: 80vh;
-  }
   .container .header .header-navbar {
     display: none;
   }
@@ -310,9 +305,6 @@ body {
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a:hover {
     background-color: var(--main-hover-color);
   }
-  .container .header .header-info {
-    min-height: 60vh;
-  }
   .container .header .header-info .header-info-img {
     max-width: 28vw;
   }
@@ -325,6 +317,73 @@ body {
   .container .blog-section {
     margin-top: 2vw;
     margin-bottom: 25px;
+  }
+  .container .blog-section h3 {
+    font-size: 2.5vw;
+  }
+  .container .blog-section .text {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 576px) {
+  .container .header-bg-image {
+    min-height: 45vh;
+  }
+  .container .header .header-hamburger-navbar {
+    margin-bottom: 35px;
+    top: 10px;
+  }
+  .container .header .header-hamburger-navbar img {
+    max-width: 17vw;
+    padding-bottom: 8px;
+  }
+  .container .header .header-hamburger-navbar .navbar-hamburger-menu i {
+    font-size: 6vw;
+  }
+  .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items {
+    height: 100px;
+    width: 85px;
+    right: -10px;
+  }
+  .container .header .header-info .header-info-img {
+    max-width: 35vw;
+    margin-bottom: 15px;
+  }
+  .container .header .header-info h2 {
+    font-size: 5vw;
+    margin-bottom: 5px;
+  }
+  .container .header .header-info p {
+    font-size: 2vw;
+  }
+  .container .header .header-info .header-info-links button a {
+    font-size: 1.8vw;
+  }
+  .container .header .header-info .header-info-links a {
+    font-size: 1.8vw;
+  }
+  .container .blog-section {
+    margin-top: 4vw;
+    margin-bottom: 5px;
+  }
+  .container .news-section .news-title h3 {
+    font-size: 2.5vw;
+  }
+  .container .news-section .news-cards {
+    flex-direction: column;
+  }
+  .container .news-section .news-cards .card-item {
+    max-width: 70vw;
+  }
+  .container .news-section .news-cards .card-item iframe {
+    max-width: 70vw;
+  }
+  .container .news-section .news-cards .card-item h4 {
+    font-size: 2.5vw;
+  }
+  .container .news-section .news-cards .card-item p {
+    font-size: 2vw;
+    margin-top: 0;
   }
 }
 
