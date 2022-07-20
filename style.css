@@ -193,7 +193,7 @@ body {
 }
 .container .blog-section h3 {
   color: var(--main-color);
-  font-size: 1.5vw;
+  font-size: 2.3vw;
 }
 .container .blog-section .text {
   font-size: 1.2vw;
@@ -218,7 +218,7 @@ body {
 }
 .container .news-section .news-title h3 {
   color: var(--main-color);
-  font-size: 1.5vw;
+  font-size: 2.3vw;
 }
 .container .news-section .news-title hr {
   min-width: 15vw;
