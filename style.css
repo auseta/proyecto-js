@@ -1,4 +1,9 @@
-@import url("http://fonts.cdnfonts.com/css/sharpshooter");
+@font-face {
+  font-family: "Sharpshooter";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sharpshooter"), url("https://fonts.cdnfonts.com/s/46920/Sharpshooter.woff") format("woff");
+}
 @keyframes translate {
   0% {
     transform: translateY(0px);
