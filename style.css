@@ -376,6 +376,7 @@ body {
     max-width: 70vw;
   }
   .container .news-section .news-cards .card-item iframe {
+    max-height: 20vh;
     max-width: 70vw;
   }
   .container .news-section .news-cards .card-item h4 {
