@@ -152,7 +152,7 @@ body {
 }
 .container .header .header-info .header-info-links {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   width: 100%;
   justify-content: space-evenly;
   margin-top: 55px;
