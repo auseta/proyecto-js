@@ -1,4 +1,15 @@
 @import url("http://fonts.cdnfonts.com/css/sharpshooter");
+@keyframes translate {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
 :root {
   --main-color: #8f8774;
   --main-hover-color: #b9ae951a;
@@ -6,9 +17,16 @@
   --transparent-color: rgb(0, 4, 0, .5);
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Sharpshooter", sans-serif;
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -25,9 +43,9 @@ body {
 .container .header {
   display: flex;
   flex-direction: column;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   min-height: 100vh;
-  max-width: 85vw;
+  max-width: 85%;
 }
 .container .header .header-navbar {
   display: flex;
@@ -42,8 +60,9 @@ body {
   display: flex;
 }
 .container .header .header-navbar .header-navbar-side-a img {
-  max-height: 20vh;
-  max-width: 10vw;
+  max-height: 15vh;
+  max-width: 12vw;
+  margin-top: 1.5rem;
 }
 .container .header .header-navbar .header-navbar-side-a ul {
   display: flex;
@@ -99,7 +118,7 @@ body {
 }
 .container .header .header-info {
   display: flex;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   min-height: 70vh;
@@ -155,6 +174,27 @@ body {
   font-size: 1.2vw;
   font-family: "Sharpshooter", sans-serif;
 }
+.container .blog-section {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4vw;
+  max-width: 95vw;
+  min-height: 10vh;
+}
+.container .blog-section .blog-title {
+  color: var(--main-color);
+  font-size: 1.5vw;
+}
+.container .blog-section .text {
+  font-size: 1.2vw;
+  color: gray;
+  padding: 0 20px;
+}
+.container .blog-section:hover {
+  border: 0.5px solid var(--main-hover-color);
+}
 
 @media (max-width: 768px) {
   .container .header .header-navbar {
@@ -184,24 +224,24 @@ body {
   }
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 0 auto;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     list-style: none;
     background-color: var(--transparent-color);
     padding: 0;
     position: absolute;
     height: 300px;
     width: 120px;
-    top: 75px;
     right: -40px;
-    transition: all 0.2s ease;
+    animation: translate 0.1s forwards;
   }
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a {
     color: var(--main-color);
     text-decoration: none;
     font-size: 2vw;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a:hover {
     background-color: var(--main-hover-color);
