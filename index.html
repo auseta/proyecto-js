@@ -21,7 +21,7 @@
                 <div class="header-navbar-side-a">
                     <img src="./assets/img/logo-enlisted.webp" alt="enlisted-logo">
                     <ul>
-                        <li><a href="#">THE GAME</a></li>
+                        <li><a href="#the-game">THE GAME</a></li>
                         <li><a href="#news-section">NEWS</a></li>
                         <li><a href="#">MEDIA</a></li>
                         <li><a href="#">CONTACT US</a></li>
@@ -29,6 +29,7 @@
                 </div>
                 <div class="header-navbar-side-b">
                     <ul>
+                        <li class="cart-container"><span class="amount">0</span><i class="fa-solid fa-cart-shopping cart"></i></li>
                         <li><a href="https://enlisted.net/es/play4free/#!/" target="_blank"> <i class="fa-brands fa-steam"></i>WISHLIST ON STEAM</a></li>
                     </ul>
                 </div>                
@@ -39,6 +40,8 @@
             <div class="header-hamburger-navbar" >
                 <img src="./assets/img/logo-enlisted.webp" alt="enlisted-logo">
                 <div class="navbar-hamburger-menu">
+                    <span class="amount-sm">0</span>
+                    <i class="fa-solid fa-cart-shopping cart-sm"></i>
                     <i onclick="openMenu()" class="menu-icon fa-solid fa-bars"></i>
                     <ul class="hamburger-menu-items remove">
                         <li><a href="#">THE GAME</a></li>
@@ -50,7 +53,7 @@
             </div>
 
 
-            <div class="header-info">
+            <div id="the-game" class="header-info">
                 <img class="header-info-img" src="/assets/img/logo-enlisted.webp" alt="">
                 <h2>¡TODO EN EL FRENTE!</h2>
                 <p>Lidera un escuadrón de soldados en batallas a gran escala de infantería, vehículos blindados y aviones que recrean las batallas más famosas de la Segunda Guerra Mundial.</p>
