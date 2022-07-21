@@ -387,9 +387,12 @@ body {
     font-size: 6vw;
   }
   .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items {
-    height: 100px;
+    height: 120px;
     width: 85px;
     right: -10px;
+  }
+  .container .header .header-hamburger-navbar .navbar-hamburger-menu .hamburger-menu-items a {
+    font-size: 3vw;
   }
   .container .header .header-info .header-info-img {
     max-width: 35vw;
