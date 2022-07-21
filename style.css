@@ -527,6 +527,18 @@ body {
     font-size: 2.5vw;
     margin-top: 0;
   }
+  .container .products-section .products-cards .product-item .item-title h4 {
+    font-size: 2vw;
+  }
+  .container .products-section .products-cards .product-item .item-specs ul li {
+    font-size: 1.5vw;
+  }
+  .container .products-section .products-cards .product-item .item-price button {
+    font-size: 1.5vw;
+  }
+  .container .products-section .products-cards .product-item .item-price p {
+    font-size: 2.5vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
