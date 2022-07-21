@@ -342,7 +342,7 @@ body {
     background-color: var(--main-hover-color);
   }
   .container .header .header-info .header-info-img {
-    max-width: 28vw;
+    max-width: 50vw;
   }
   .container .header .header-info p {
     padding-bottom: 20px;
@@ -355,10 +355,10 @@ body {
     margin-bottom: 25px;
   }
   .container .blog-section h3 {
-    font-size: 2.5vw;
+    font-size: 4vw;
   }
   .container .blog-section .text {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 }
 @media (max-width: 576px) {
@@ -400,13 +400,13 @@ body {
     margin-bottom: 5px;
   }
   .container .header .header-info p {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .container .header .header-info .header-info-links button a {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   .container .header .header-info .header-info-links a {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   .container .blog-section {
     margin-top: 4vw;
@@ -427,10 +427,10 @@ body {
   }
   .container .news-section .news-cards .card-item h4 {
     margin-top: 10px;
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
   .container .news-section .news-cards .card-item p {
-    font-size: 2vw;
+    font-size: 2.5vw;
     margin-top: 0;
   }
 }
