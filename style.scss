@@ -20,6 +20,34 @@
 }
 
 //Mixins
+@mixin sectionTitles {
+  display: flex;
+  align-items: center;
+  min-width: 100vw;
+  h3 {
+    @include h3Mixin();
+  }
+  hr {
+    min-width: 15vw;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+  }
+}
+
+@mixin sectionCards {
+  display: flex;
+  max-width: 80vw;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@mixin cardItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30vw;
+}
+
 @mixin backgroundImage {
   position: absolute;
   max-width: 100vw;
@@ -252,30 +280,14 @@ body {
     // background-color: darkolivegreen;
     max-width: 100vw;
     min-height: 100vh;
+    margin-bottom: 4vh;
     .news-title {
-      display: flex;
-      align-items: center;
-      // background-color: cyan;
-      min-width: 100vw;
-      h3 {
-        @include h3Mixin();
-      }
-      hr {
-        min-width: 15vw;
-        border: none;
-        border-bottom: 1px solid var(--main-color);
-      }
+      @include sectionTitles()
     }
     .news-cards {
-      display: flex;
-      max-width: 80vw;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
+      @include sectionCards();
       .card-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 30vw;
+        @include cardItem();
         iframe {
           max-height: 40vh;
           max-width: 30vw;
@@ -296,6 +308,78 @@ body {
   }
 
   // Products Section
+  .products-section {
+    @include flexColumnItemCenter();
+    // background-color: darkolivegreen;
+    max-width: 100vw;
+    min-height: 100vh;
+    // background-color: orange;
+    .products-title {
+      @include sectionTitles();
+    }
+    .products-cards {
+      @include sectionCards();
+      max-width: 70vw;
+      .product-item {
+        max-width: 29vw;
+        margin-top: 20px;
+        img {
+          max-width: 28vw
+        }
+        @include cardItem();
+        border: 5px solid var(--main-color);
+        .item-title {
+          background-color: #65B236;
+          min-width: 100%;
+          border: 2px solid black;
+          h4 {
+            margin: 1px 0px 0px 0px;
+            color: black;
+            font-size: 1.6vw;
+          }
+        }
+        .item-specs {
+          min-width: 100%;
+          background-color: gray;
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            border: 2px solid black;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 10px;
+            min-width: 10vw;
+            li {
+              margin-top: 10px;
+              margin-left: 20px;
+              font-size: 1vw;
+            }
+          }
+        }
+        .item-price {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border: 2px solid black;
+          background-color: green;
+          min-width: 100%;
+          max-height: 7vh;
+          button {
+            font-family: "Sharpshooter", sans-serif;
+            background-color: #b98d3c;
+            padding: 1vh;
+            font-size: 1vw;
+            max-height: 5vh;
+          }
+          p {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+  }
 }
 
 //* ---- Media Queries ----
