@@ -301,22 +301,23 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 70vw;
+  gap: 20px;
 }
 .container .products-section .products-cards .product-item {
-  max-width: 29vw;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 30vw;
+  max-width: 21vw;
+  margin-top: 20px;
   border: 5px solid var(--main-color);
 }
 .container .products-section .products-cards .product-item img {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 50%;
 }
 .container .products-section .products-cards .product-item .item-title {
-  background-color: #65B236;
+  background-color: #65b236;
   min-width: 100%;
   border: 2px solid black;
 }
@@ -355,14 +356,63 @@ body {
   max-height: 7vh;
 }
 .container .products-section .products-cards .product-item .item-price button {
+  cursor: pointer;
   font-family: "Sharpshooter", sans-serif;
   background-color: #b98d3c;
   padding: 1vh;
   font-size: 1vw;
   max-height: 5vh;
 }
+.container .products-section .products-cards .product-item .item-price button:hover {
+  background-color: #d69213;
+}
 .container .products-section .products-cards .product-item .item-price p {
   font-size: 2vw;
+}
+.container .cartWrapper .cart-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 60vw;
+  margin: -10px auto 10px auto;
+  border: 5px solid var(--main-color);
+}
+.container .cartWrapper .cart-items .product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50vw;
+}
+.container .cartWrapper .cart-items .product p {
+  color: var(--main-color);
+  font-size: 1.5vw;
+  letter-spacing: 3px;
+  border-bottom: 0.5px solid var(--main-color);
+}
+.container .cartWrapper .cart-items .product button {
+  cursor: pointer;
+  letter-spacing: 3px;
+  background: none;
+  height: 24px;
+  margin-left: 25px;
+}
+.container .cartWrapper .cart-items .product button i {
+  font-size: 1.5vw;
+  color: red;
+}
+.container .totalPrice {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 8vw;
+  color: var(--main-color);
+  font-size: 1.5vw;
+  gap: 10px;
+}
+.container .totalPrice h4 {
+  border-bottom: 1px solid var(--main-color);
 }
 
 @media (max-width: 768px) {

@@ -40,7 +40,7 @@
             <div class="header-hamburger-navbar" >
                 <img src="./assets/img/logo-enlisted.webp" alt="enlisted-logo">
                 <div class="navbar-hamburger-menu">
-                    <span class="amount-sm">0</span>
+                    <span class="amount-sm totalItems">0</span>
                     <i class="fa-solid fa-cart-shopping cart-sm"></i>
                     <i onclick="openMenu()" class="menu-icon fa-solid fa-bars"></i>
                     <ul class="hamburger-menu-items remove">
@@ -126,7 +126,7 @@
                         </ul>
                     </div>
                     <div class="item-price">
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('TUNISIA STARTER PACK', 4.99, 1 )" class="add-button">Añadir al carrito</button>
                         <p><span>$</span>4.99</p>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                         </ul>
                     </div>
                     <div class="item-price">
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('MOSCOW STARTER PACK', 9, 1 )" class="add-button">Añadir al carrito</button>
                         <p><span>$</span>8.99</p>
                     </div>
                 </div>
@@ -160,30 +160,22 @@
                         </ul>
                     </div>
                     <div class="item-price">
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('BERLIN STARTER PACK', 10.70 , 1 )" class="add-button">Añadir al carrito</button>
                         <p><span>$</span>10.70</p>
-                    </div>
-                </div>
-                <div class="product-item">
-                    <img src="./assets/img/product-1.jpg" alt="product-1">
-                    <div class="item-title">
-                        <h4>TUNISIA/BERLIN STARTER PACK</h4>
-                    </div>
-                    <div class="item-specs">
-                        <ul>
-                            <li>Soldado Soviético de clase "Asalto"</li>
-                            <li>Soldado Aleman de clase "Asalto"</li>
-                            <li>Soldado Britanico de clase "Asalto"</li>
-                        </ul>
-                    </div>
-                    <div class="item-price">
-                        <button>Añadir al carrito</button>
-                        <p><span>$</span>4.99</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!--* Product List  -->
+        <section class="cartWrapper">
+
+        </section>
+        <section class="totalPrice">
+            <h4>TOTAL:</h4>
+            <span class="totalProducts"></span>
+            $
+        </section>
     </div>
 </body>
 <script src="./index.js"></script>
