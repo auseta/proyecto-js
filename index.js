@@ -2,32 +2,13 @@ let hamburgerMenuList = document.querySelector(".hamburger-menu-items");
 let totalItems = document.querySelector(".totalItems");
 let totalItems2 = document.querySelector(".amount")
 let totalProducts = document.querySelector(".totalProducts");
-console.log(totalProducts);
 let cartWrapper = document.querySelector(".cartWrapper");
-console.log(cartWrapper);
 
 // INICIO: Comportamiento del Menu Hamburguesa
 const openMenu = () => {
   hamburgerMenuList.classList.toggle("remove");
 };
-
 // FIN: Comportamiento del Menu Hamburguesa
-
-
-// INICIO: Eliminar Producto
-
-const removeProduct = (product) => {
-  console.log(products);
-}
-
-
-
-// FIN: Eliminar Producto
-
-
-
-
-
 
 
 
@@ -67,15 +48,22 @@ const productsList = () => {
                         : $
                         <span class="product-price">${product.price}</span>
                     </p>
-                    <button onclick="removeProduct(${product.product})"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <button class="buttonRemove"><i class="far fa-times-circle"></i></button>
                 </div>
             </div>
         `;
   });
+
+  let buttonRemove = document.querySelectorAll(".buttonRemove");
+  buttonRemove.forEach(button => {
+    button.addEventListener("click", (e) => {
+      let cartItem = e.target.parentElement
+      console.log(cartItem);
+    })
+  })
 };
 
 const addProduct = (product, price, count) => {
-  console.log(products);
   for (const i in products) {
     if (products[i].product === product) {
       products[i].count++;

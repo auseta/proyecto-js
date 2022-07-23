@@ -390,14 +390,14 @@ body {
   letter-spacing: 3px;
   border-bottom: 0.5px solid var(--main-color);
 }
-.container .cartWrapper .cart-items .product button {
+.container .cartWrapper .cart-items .buttonRemove {
   cursor: pointer;
   letter-spacing: 3px;
   background: none;
   height: 24px;
   margin-left: 25px;
 }
-.container .cartWrapper .cart-items .product button i {
+.container .cartWrapper .cart-items .buttonRemove i {
   font-size: 1.5vw;
   color: red;
 }
