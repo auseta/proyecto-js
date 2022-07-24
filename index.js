@@ -1,6 +1,6 @@
 let hamburgerMenuList = document.querySelector(".hamburger-menu-items");
 let totalItems = document.querySelector(".totalItems");
-let totalItems2 = document.querySelector(".amount")
+let totalItems2 = document.querySelector(".amount");
 let totalProducts = document.querySelector(".totalProducts");
 let cartWrapper = document.querySelector(".cartWrapper");
 
@@ -9,8 +9,6 @@ const openMenu = () => {
   hamburgerMenuList.classList.toggle("remove");
 };
 // FIN: Comportamiento del Menu Hamburguesa
-
-
 
 // INICIO: Comportamiento de los Productos
 
@@ -53,14 +51,38 @@ const productsList = () => {
             </div>
         `;
   });
+};
 
-  let buttonRemove = document.querySelectorAll(".buttonRemove");
-  buttonRemove.forEach(button => {
-    button.addEventListener("click", (e) => {
-      let cartItem = e.target.parentElement
-      console.log(cartItem);
-    })
+const addStorage = () => {
+  localStorage.setItem("productos", JSON.stringify(products));
+};
+
+const loadStorage = () => {
+  if (JSON.parse(localStorage.getItem("info")) === "null") {
+    return;
+  }
+
+  let info = Array.from(JSON.parse(localStorage.getItem("productos")))
+  console.log(info);
+  info.forEach(e => {
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-items")
+    console.log(cartItem);
+    cartItem.innerHTML = `
+      <div class="product">
+        <p>
+          <span class="product-name">${e.product}</span>
+          x
+          <span class="product-amount">${e.count}</span>
+          : $
+          <span class="product-price">${e.price}</span>
+        </p>
+        <button class="buttonRemove"><i class="far fa-times-circle"></i></button>
+      </div>
+    `
+    cartWrapper.appendChild(cartItem)
   })
+
 };
 
 const addProduct = (product, price, count) => {
@@ -70,6 +92,7 @@ const addProduct = (product, price, count) => {
       setCount();
       totalPrice();
       productsList();
+      addStorage();
       return;
     }
   }
@@ -78,6 +101,9 @@ const addProduct = (product, price, count) => {
   setCount();
   totalPrice();
   productsList();
+  addStorage();
 };
 
 // INICIO: Comportamiento de los Productos
+
+loadStorage();
