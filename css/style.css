@@ -415,9 +415,11 @@ body {
   border-bottom: 1px solid var(--main-color);
 }
 .container .section-footer {
+  border-top: 1px solid var(--main-color);
+  margin-top: 20px;
   font-family: sans-serif;
   font-size: 2vw;
-  background-color: var(--main-color);
+  color: var(--main-color);
   min-height: 30vh;
 }
 .container .section-footer footer {
@@ -633,9 +635,7 @@ body {
     border-bottom: 1px solid var(--main-color);
   }
   .container .section-footer {
-    font-family: sans-serif;
     font-size: 3vw;
-    background-color: var(--main-color);
   }
   .container .section-footer footer {
     margin-left: auto;
@@ -648,7 +648,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    list-style: none;
   }
   .container .section-footer footer ul li {
     margin-top: 10px;
