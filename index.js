@@ -11,8 +11,7 @@ const openMenu = () => {
 // FIN: Comportamiento del Menu Hamburguesa
 
 // INICIO: Comportamiento de los Productos
-
-let products = [];
+let products = []
 
 const setCount = () => {
   let totalCount = 0;
@@ -54,36 +53,36 @@ const productsList = () => {
 };
 
 const addStorage = () => {
-  localStorage.setItem("productos", JSON.stringify(products));
-};
+  localStorage.setItem("productos", JSON.stringify(products))
+}
 
 const loadStorage = () => {
-  if (JSON.parse(localStorage.getItem("info")) === "null") {
-    return;
+  if (localStorage.getItem("productos")) {
+    let productos = JSON.parse(localStorage.getItem("productos"))
+    console.log(productos);
+    products.push(...productos)
+    setCount()
+    totalPrice()
+    console.log(products);
+    cartWrapper.innerHTML = products.map((product => {
+      return `
+        <div class="cart-items">
+          <div class="product">
+            <p>
+              <span class="product-name">${product.product}</span>
+              x
+              <span class="product-amount">${product.count}</span>
+              : $
+              <span class="product-price">${product.price}</span>
+            </p>
+            <button class="buttonRemove"><i class="far fa-times-circle"></i></button>
+          </div>
+        </div>
+      `
+    }))
   }
+}
 
-  let info = Array.from(JSON.parse(localStorage.getItem("productos")))
-  console.log(info);
-  info.forEach(e => {
-    const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-items")
-    console.log(cartItem);
-    cartItem.innerHTML = `
-      <div class="product">
-        <p>
-          <span class="product-name">${e.product}</span>
-          x
-          <span class="product-amount">${e.count}</span>
-          : $
-          <span class="product-price">${e.price}</span>
-        </p>
-        <button class="buttonRemove"><i class="far fa-times-circle"></i></button>
-      </div>
-    `
-    cartWrapper.appendChild(cartItem)
-  })
-
-};
 
 const addProduct = (product, price, count) => {
   for (const i in products) {
@@ -104,6 +103,4 @@ const addProduct = (product, price, count) => {
   addStorage();
 };
 
-// INICIO: Comportamiento de los Productos
-
-loadStorage();
+loadStorage()
