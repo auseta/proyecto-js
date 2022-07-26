@@ -429,6 +429,28 @@ body {
       border-bottom: 1px solid var(--main-color);
     }
   }
+
+  .section-footer {
+    font-family: sans-serif;
+    font-size: 2vw;
+    background-color: var(--main-color);
+    min-height: 30vh;
+    footer {
+      margin-left: auto; margin-right: auto;
+      max-width: 90vw;
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        flex-wrap: wrap;
+        gap: 25px;
+        list-style: none;
+        li {
+          margin: 50px 8px 6px 6px;
+        }
+      }
+    }
+  }
 }
 
 //* ---- Media Queries ----
@@ -657,6 +679,26 @@ body {
       gap: 10px;
       h4 {
         border-bottom: 1px solid var(--main-color);
+      }
+    }
+    .section-footer {
+      font-family: sans-serif;
+      font-size: 3vw;
+      background-color: var(--main-color);
+      footer {
+        margin-left: auto; margin-right: auto;
+        max-width: 90vw;
+        min-height: 30vh;
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content:space-around;
+          align-items: center;
+          list-style: none;
+          li {
+            margin-top: 10px;
+          }
+        }
       }
     }
   }

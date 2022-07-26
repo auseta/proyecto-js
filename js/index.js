@@ -59,11 +59,9 @@ const addStorage = () => {
 const loadStorage = () => {
   if (localStorage.getItem("productos")) {
     let productos = JSON.parse(localStorage.getItem("productos"))
-    console.log(productos);
     products.push(...productos)
     setCount()
     totalPrice()
-    console.log(products);
     cartWrapper.innerHTML = products.map((product => {
       return `
         <div class="cart-items">
@@ -83,6 +81,15 @@ const loadStorage = () => {
   }
 }
 
+const removeProduct = () => {
+  let removeBtn = document.querySelectorAll(".buttonRemove")
+  removeBtn.forEach(btn => {
+    btn.addEventListener("click", ()=> {
+      let elementRemove = btn.parentNode.parentNode;
+      elementRemove.remove()
+    })
+  })
+}
 
 const addProduct = (product, price, count) => {
   for (const i in products) {
@@ -104,3 +111,5 @@ const addProduct = (product, price, count) => {
 };
 
 loadStorage()
+
+removeProduct()

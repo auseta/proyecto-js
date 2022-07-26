@@ -414,6 +414,28 @@ body {
 .container .totalPrice h4 {
   border-bottom: 1px solid var(--main-color);
 }
+.container .section-footer {
+  font-family: sans-serif;
+  font-size: 2vw;
+  background-color: var(--main-color);
+  min-height: 30vh;
+}
+.container .section-footer footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90vw;
+}
+.container .section-footer footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+}
+.container .section-footer footer ul li {
+  margin: 50px 8px 6px 6px;
+}
 
 @media (max-width: 768px) {
   .container .header .header-navbar {
@@ -609,6 +631,27 @@ body {
   }
   .container .totalPrice h4 {
     border-bottom: 1px solid var(--main-color);
+  }
+  .container .section-footer {
+    font-family: sans-serif;
+    font-size: 3vw;
+    background-color: var(--main-color);
+  }
+  .container .section-footer footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vw;
+    min-height: 30vh;
+  }
+  .container .section-footer footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  .container .section-footer footer ul li {
+    margin-top: 10px;
   }
 }
 
